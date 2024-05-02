@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <>
       <main className="min-h-[87vh] items-center justify-between px-24 pt-8 text w-fit mx-auto text-center ">
-        <div className={"text-start"} onClick={event => {
+        <div className={"text-start w-fit mx-auto"} onClick={event => {
           if (isLive) {
             setShowStream(true)
           }
@@ -72,13 +72,17 @@ export default function Home() {
           The wizards are hard at work casting web magic
         </div>
         <div className={"text-xl"}>
-          While we work, why not play some <Link className={"text-yellow-300 underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
+          While we work, why not play some <Link className={"text-yellow-300 underline"}
+                                                 href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
           <br/>
           Also checkout the <Link className={"text-yellow-300 underline"}
                                   href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud
           event</Link>
         </div>
 
+        <div className={"text-orange-400 text-xl pt-14"}>
+          We hope to bring wizards the knowledge of the<br/>discovered spells and when/how to use them
+        </div>
       </main>
       <footer className={"flex flex-col items-center justify-between pb-6 text-center glow tracking-normal trust"}>
         <div className={"text-4xl"}>:::TRUST COMMUNICATION:::</div>
