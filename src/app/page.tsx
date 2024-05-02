@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 
 export default function Home() {
   const [isLive, setIsLive] = useState(false);
-  const [showStream, setShowStream] = useState(false)
+  const [sc001, setSc001] = useState(false)
 
   useEffect(() => {
     fetch("https://api.awakenedredstone.com/v2/twitch/is_live/piratesoftware").then(r => {
@@ -56,12 +56,10 @@ export default function Home() {
     <>
       <main className="min-h-[87vh] items-center justify-between px-24 pt-8 text w-fit mx-auto text-center ">
         <div className={"text-start w-fit mx-auto"} onClick={event => {
-          if (isLive) {
-            setShowStream(true)
-          }
+          setSc001(true)
         }}>
           {
-            showStream ? <iframe
+            sc001 && isLive ? <iframe
               src="https://player.twitch.tv/?channel=piratesoftware&parent=localhost&parent=wizmud.com&height=540"
               width="960"
               height="540"
@@ -72,17 +70,16 @@ export default function Home() {
           The wizards are hard at work casting web magic
         </div>
         <div className={"text-xl"}>
-          While we work, why not play some <Link className={"text-yellow-300 underline"}
-                                                 href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
+          While we work, why not play some <Link className={"text-yellow-300 underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
           <br/>
-          Also checkout the <Link className={"text-yellow-300 underline"}
-                                  href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud
-          event</Link>
+          Also checkout the <Link className={"text-yellow-300 underline"} href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud event</Link>
         </div>
 
-        <div className={"text-orange-400 text-xl pt-14"}>
-          We hope to bring wizards the knowledge of the<br/>spells at wiz.mud and when/how to use them
-        </div>
+        {
+          sc001 && <div className={"text-orange-400 text-xl pt-14"}>
+            We hope to bring wizards the knowledge of the<br/>spells at wiz.mud and when/how to use them
+          </div>
+        }
       </main>
       <footer className={"flex flex-col items-center justify-between pb-6 text-center glow tracking-normal trust"}>
         <div className={"text-4xl"}>:::TRUST COMMUNICATION:::</div>
