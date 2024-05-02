@@ -81,7 +81,7 @@ export default function Home() {
         </div>
 
         <div className={"text-orange-400 text-xl pt-14"}>
-          We hope to bring wizards the knowledge of the<br/>discovered spells and when/how to use them
+          We hope to bring wizards the knowledge of the<br/>spells at wiz.mud and when/how to use them
         </div>
       </main>
       <footer className={"flex flex-col items-center justify-between pb-6 text-center glow tracking-normal trust"}>
