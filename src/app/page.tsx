@@ -49,7 +49,7 @@ export default function Home() {
     <div className={"leading-none tracking-tight whitespace-pre"}>
       {hatText}
     </div>
-    <div className={"text-center pt-4"}>Art from wiz.mud</div>
+    <div className={"text-center pt-4"}>Hat from wiz.mud</div>
   </code>
 
   return (
