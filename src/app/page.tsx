@@ -45,7 +45,7 @@ export default function Home() {
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████████████████████████<br/>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;████████████████████████<br/>
     </div>
-    <div className={"text-center pt-4"}>Art by wiz.mud</div>
+    <div className={"text-center pt-4"}>Art from wiz.mud</div>
   </code>
 
   return (
