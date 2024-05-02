@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #101215;
+  background-image: repeating-linear-gradient(180deg, #0e0e0e, #0e0e0e 0.2em, #101215 0.2em, #101215 0.4em);
+  color: #83B0F2;
+  font-family: "white_rabbitregular", monospace;
+}
+
+body {
+  font-family: "white_rabbitregular", monospace !important;
+  text-shadow: 0 0 5px currentColor;
+}
+
+code {
+  font-family: "white_rabbitregular", monospace !important;
+  text-shadow: 0 0 5px currentColor;
+}
+
+.trust {
+  color: red;
+}
+
+@font-face {
+  font-family:'white_rabbitregular';
+  src: url(/whiterabbit.woff2) format("woff2"), url(/whiterabbit.woff) format("woff");
+  font-weight:normal;
+  font-style:normal
+}
+
