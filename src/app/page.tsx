@@ -72,11 +72,14 @@ export default function Home() {
           The <span className={"text-script"}>library</span> is still being build, but is now open
         </div>
         <div className={"text-xl"}>
-          While we work, why not play some <Link className={"text-custom-H underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
+          While we work, why not play some <Link className={"text-custom-H underline"}
+                                                 href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
           <br/>
-          Also checkout the <Link className={"text-custom-H underline"} href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud event</Link>
+          Also checkout the <Link className={"text-custom-H underline"}
+                                  href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud
+          event</Link>
         </div>
-        <p className={"p-8"}>
+        <p className={"pt-8"}>
           <span className={"text-red glow text-xl"}>:::███████ COMMUNICATION:::</span>
           <br/>
           Th3 w1z4rd5 0f <Script>wizmud.com</Script> w0uld
