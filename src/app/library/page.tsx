@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Library() {
   return (
-    <main>
+    <main className={"tracking-tight"}>
       ████████ haven&#39;t yet allowed access to the library, sorry...
     </main>
   );
