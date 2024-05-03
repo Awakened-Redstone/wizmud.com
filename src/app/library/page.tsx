@@ -1,7 +1,6 @@
 import React from "react";
-import {Art} from "@/app/page";
 
-export function Script({trust = false, children}: {trust?: boolean, children: string}) {
+/*export function Script({trust = false, children}: {trust?: boolean, children: string}) {
   const parts = children.split(".");
   return (
     <>
@@ -10,7 +9,7 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
       <span className={"text-script"}>{parts[1]}</span>
     </>
   )
-}
+}*/
 
 export default function Library() {
   return (

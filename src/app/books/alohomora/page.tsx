@@ -1,5 +1,3 @@
-import {Script} from "@/app/library/page";
-
 export default function Book() {
   return (
     <main>
