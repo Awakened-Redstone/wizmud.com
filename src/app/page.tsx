@@ -4,14 +4,6 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {twMerge} from "tailwind-merge";
 
-export function Art({children, className}: {children: string, className?: string}) {
-  return (
-    <div className={twMerge("text-start leading-none tracking-tight whitespace-pre", className)}>
-      {children}
-    </div>
-  );
-}
-
 export default function Home() {
   const [isLive, setIsLive] = useState(false);
   const [sc001, setSc001] = useState(false)

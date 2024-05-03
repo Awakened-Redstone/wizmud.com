@@ -1,16 +1,5 @@
 import React from "react";
 
-/*export function Script({trust = false, children}: {trust?: boolean, children: string}) {
-  const parts = children.split(".");
-  return (
-    <>
-      <span className={trust ? "text-trust" : "text-username"}>{parts[0]}</span>
-      .
-      <span className={"text-script"}>{parts[1]}</span>
-    </>
-  )
-}*/
-
 export default function Library() {
   return (
     <main>

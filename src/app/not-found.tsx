@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import {Art} from "@/app/page";
+import {Art} from "@/components/common";
 
 export default function NotFound() {
   const art404: string = `
