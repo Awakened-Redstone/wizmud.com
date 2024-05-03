@@ -22,7 +22,8 @@ export default function Library() {
         <span className={"flex"}>
           <Art className={"text-key"}>{bookText}</Art>
         </span>
-        Casting <span className={"text-value"}>alohomora</span>
+        <span className={"text-value"}>alohomora</span>, br34k1ng th3 mud <span className={"text-custom-c"}>- Publisher: Tower Corp | Writer: █████████</span><br/>
+        <span className={"text-value"}>pay2wiz</span>, c4st1ng sp3lls <span className={"text-custom-c"}>- Publisher: Tower Corp | Writer: █████████</span>
       </main>
     </>
   );
