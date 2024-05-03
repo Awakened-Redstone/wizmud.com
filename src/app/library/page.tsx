@@ -1,13 +1,13 @@
-import React from "react";
+import {Art} from "@/components/common";
 
 export default function Library() {
-  return (
+  /*return (
     <main className={"tracking-tight"}>
       ████████ haven&#39;t yet allowed access to the library, sorry...
     </main>
-  );
+  );*/
 
-  /*const bookText: string = `
+  const bookText: string = `
 ██████╗  █████╗  █████╗ ██╗  ██╗ ██████╗
 ██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝
 ██████╦╝██║  ██║██║  ██║█████═╝ ╚█████╗
@@ -25,5 +25,5 @@ export default function Library() {
         Casting <span className={"text-value"}>alohomora</span>
       </main>
     </>
-  );*/
+  );
 }

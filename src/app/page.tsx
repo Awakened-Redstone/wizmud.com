@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     fetch("https://api.awakenedredstone.com/v2/twitch/is_live/piratesoftware").then(r => {
       r.json().then(value => {
-        setIsLive(value.data && value.data.length > 0 && value.data[0].game_name.toLowerCase() === "hackmud");
+        setIsLive(value.data && value.data.length > 0 && (value.data[0].game_name.toLowerCase() === "hackmud" || value.data[0].game_name.toLowerCase() === "software and game development"));
       })
     });
   }, []);
@@ -68,7 +68,7 @@ export default function Home() {
           }
         </div>
         <div className={"text-red-500 text-xl pt-4 pb-4"}>
-          The wizards are hard at work casting web magic
+          The <span className={"text-script"}>library</span> is still being build, but is now open
         </div>
         <div className={"text-xl"}>
           While we work, why not play some <Link className={"text-yellow-300 underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>

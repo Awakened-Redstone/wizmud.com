@@ -1,3 +1,5 @@
+"use client";
+
 import {twMerge} from "tailwind-merge";
 import React from "react";
 
@@ -9,13 +11,63 @@ export function Art({children, className}: {children: string, className?: string
   );
 }
 
+export type ScriptParams = {
+  [key: string]: string | number | null | string[] | number[]
+}
+
 export function Script({trust = false, children}: {trust?: boolean, children: string}) {
-  const parts = children.split(".");
-  return (
+  const split = children.split(" ");
+  const sections: string[] = [split.shift() as string, split.join(' ')]
+  const parts = sections[0].split(".");
+  const command = (
     <>
       <span className={trust ? "text-trust" : "text-username"}>{parts[0]}</span>
       .
       <span className={"text-script"}>{parts[1]}</span>
     </>
-  )
+  );
+
+  let params = <></>;
+
+  if (split.length > 0) {
+    const invalidJson = sections[1]
+    const validJson = invalidJson.replace(/(\w+)(?=:)/g, '"$1"').replace(/(?<=:) ?(#\w+\.\w+\.\w+)/g, '"$1"');
+    const json: ScriptParams = JSON.parse(validJson);
+
+    let val = (
+      <>
+        &nbsp;&#123;&nbsp;
+        {
+          Object.keys(json).map(key => {
+            const val = json[key]
+            let parsedVal = <>{JSON.stringify(val)}</>;
+            let isTarget: boolean = false;
+            if (typeof val === "string" && /(#\w+\.\w+\.\w+)/g.test(val as string)) {
+              const parts = val.split(".");
+              const trig = parts.shift();
+              const script = parts.join(".");
+              parsedVal = (
+                <>
+                  <span>{trig}</span>
+                  .
+                  <Script>{script}</Script>
+                </>
+              )
+            }
+
+            return (
+              <>
+                <span className={"text-key"}>{key}</span>: <span className={"text-value"}>{parsedVal}</span>
+              </>
+            );
+          })
+        }
+        &nbsp;&#125;
+      </>
+    );
+
+    params = val
+  }
+
+  return <>{command}{params}</>;
 }
