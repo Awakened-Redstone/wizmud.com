@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import {twMerge} from "tailwind-merge";
+import {Script} from "@/components/common";
 
 export default function Home() {
   const [isLive, setIsLive] = useState(false);
@@ -52,7 +53,7 @@ export default function Home() {
     }}>
       {hatText}
     </div>
-    <div className={"text-center pt-4"}>Hat from wiz.mud</div>
+    <div className={"text-center pt-4"}>Hat from <Script>wiz.mud</Script></div>
   </>
 
   return (
@@ -71,10 +72,17 @@ export default function Home() {
           The <span className={"text-script"}>library</span> is still being build, but is now open
         </div>
         <div className={"text-xl"}>
-          While we work, why not play some <Link className={"text-yellow-300 underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
+          While we work, why not play some <Link className={"text-custom-H underline"} href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
           <br/>
-          Also checkout the <Link className={"text-yellow-300 underline"} href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud event</Link>
+          Also checkout the <Link className={"text-custom-H underline"} href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud event</Link>
         </div>
+        <p className={"p-8"}>
+          <span className={"text-red glow text-xl"}>:::███████ COMMUNICATION:::</span>
+          <br/>
+          Th3 w1z4rd5 0f <Script>wizmud.com</Script> w0uld
+          <br/>
+          l0v3 t0 w0rk w1th <Script>wiz.mud</Script>
+        </p>
       </main>
     </>
   );
