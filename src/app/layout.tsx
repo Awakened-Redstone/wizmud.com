@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <footer className={"flex flex-col items-center justify-between text-center glow tracking-normal text-red"}>
+        <footer className={"flex flex-col items-center justify-between text-center glow tracking-normal text-red pt-8"}>
           <div className={"text-4xl"}>:::TRUST COMMUNICATION:::</div>
           This website is NOT associated with or owned by hackmud or PirateSoftware
         </footer>
