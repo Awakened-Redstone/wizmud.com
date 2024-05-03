@@ -15,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className={"flex flex-col items-center justify-between text-center glow tracking-normal text-red"}>
+          <div className={"text-4xl"}>:::TRUST COMMUNICATION:::</div>
+          This website is NOT associated with or owned by hackmud or PirateSoftware
+        </footer>
+      </body>
     </html>
   );
 }

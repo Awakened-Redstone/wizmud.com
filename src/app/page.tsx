@@ -2,6 +2,15 @@
 
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import {twMerge} from "tailwind-merge";
+
+export function Art({children, className}: {children: string, className?: string}) {
+  return (
+    <div className={twMerge("text-start leading-none tracking-tight whitespace-pre", className)}>
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   const [isLive, setIsLive] = useState(false);
@@ -45,19 +54,19 @@ export default function Home() {
                 ████████████████████████`
     .replace("\n", "")
 
-  const hat = <code>
-    <div className={"leading-none tracking-tight whitespace-pre"}>
+  const hat = <>
+    <div className={"leading-none tracking-tight whitespace-pre glow"} onClick={event => {
+      setSc001(true)
+    }}>
       {hatText}
     </div>
     <div className={"text-center pt-4"}>Hat from wiz.mud</div>
-  </code>
+  </>
 
   return (
     <>
-      <main className="min-h-[87vh] items-center justify-between px-24 pt-8 text w-fit mx-auto text-center ">
-        <div className={"text-start w-fit mx-auto"} onClick={event => {
-          setSc001(true)
-        }}>
+      <main className="items-center justify-between px-24 pt-8 text w-fit mx-auto text-center ">
+        <div className={"text-start w-fit mx-auto"}>
           {
             sc001 && isLive ? <iframe
               src="https://player.twitch.tv/?channel=piratesoftware&parent=localhost&parent=wizmud.com&height=540"
@@ -74,17 +83,7 @@ export default function Home() {
           <br/>
           Also checkout the <Link className={"text-yellow-300 underline"} href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud event</Link>
         </div>
-
-        {
-          sc001 && <div className={"text-orange-400 text-xl pt-14"}>
-            We hope to bring wizards the knowledge of the<br/>spells at wiz.mud and when/how to use them
-          </div>
-        }
       </main>
-      <footer className={"flex flex-col items-center justify-between pb-6 text-center glow tracking-normal trust"}>
-        <div className={"text-4xl"}>:::TRUST COMMUNICATION:::</div>
-        This website is NOT associated or owned by hackmud or PirateSoftware
-      </footer>
     </>
   );
 }

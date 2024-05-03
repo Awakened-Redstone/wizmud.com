@@ -5,22 +5,26 @@
 :root {
   background-color: #101215;
   background-image: repeating-linear-gradient(180deg, #0e0e0e, #0e0e0e 0.2em, #101215 0.2em, #101215 0.4em);
-  color: #83B0F2;
+  @apply text-default;
   font-family: "white_rabbitregular", monospace;
 }
 
 body {
   font-family: "white_rabbitregular", monospace !important;
-  text-shadow: 0 0 5px currentColor;
+  text-shadow: 0 0 15px color-mix(in srgb, currentColor, transparent 70%);
+  padding: .5rem;
+}
+
+main {
+  min-height: calc(100vh - 4.5rem);
 }
 
 code {
   font-family: "white_rabbitregular", monospace !important;
-  text-shadow: 0 0 5px currentColor;
 }
 
-.trust {
-  color: red;
+.glow {
+  text-shadow: 0 0 10px currentColor;
 }
 
 @font-face {
