@@ -13,7 +13,8 @@ export default function Corp() {
     \\/_/\\/_/\\/_____/  \\/_/  '\\/__//__/  \\/_____/\\/_______/    \\/___/   \\/_____/\\/_/\\/ /\\/_/ \
 `}</Art>
       Publications:<br/>
-      pay2wiz, casting spells
+      alohomora, breaking the mud <span className={"text-custom-c"}>- Note: creative book names wizard was sick at day of publication</span><br/>
+      pay2wiz, casting spells<br/>
     </main>
   );
 }

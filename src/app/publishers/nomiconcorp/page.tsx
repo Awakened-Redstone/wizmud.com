@@ -16,7 +16,7 @@ export default function Corp() {
 ::    :    : :  :    :      :    :     :: :: :   : :  :   ::    :       :: :: :   : :  :    :   : :   :        \
 `}</Art>
       Publications:<br/>
-      alohomora, br34k1ng th3 mud <span className={"text-custom-c"}>- Note: creative book names wizard was sick at day of publication</span>
+      4rc4n3_3y3, f1nd th3 h1dd3n
       <br/><br/>
       Notes:<br/>
       Nomicon&#39;s CEO is heavily inspired by Tower Corp

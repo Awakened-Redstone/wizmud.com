@@ -80,6 +80,9 @@ export default function Home() {
           Welcome to wizmud public script. Please refrain from engaging in criminal activity.<br/>
           <Link href={"/library"} className={"text-script"}>library</Link> |  ¨ª¢©¦Ã¤ª¦
         </div>
+        <div>
+          The wizards are sorry for taking the domain from <Script>wiz.mud</Script><br/>
+        </div>
       </main>
     </>
   );

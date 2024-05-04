@@ -2,6 +2,7 @@
 
 import {twMerge} from "tailwind-merge";
 import React from "react";
+import Link from "next/link";
 
 export function Art({children, className}: {children: string, className?: string}) {
   return (
@@ -22,8 +23,12 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
   const command = (
     <>
       <span className={trust ? "text-trust" : "text-username"}>{parts[0]}</span>
-      .
-      <span className={"text-script"}>{parts[1]}</span>
+      {
+        parts[1] && <>
+          .
+          <span className={"text-script"}>{parts[1]}</span>
+        </>
+      }
     </>
   );
 
@@ -75,4 +80,15 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
   }
 
   return <>{command}{params}</>;
+}
+
+export function Book({children}: {children: string}) {
+  return <Link href={`/books/${children}`} className={"text-value"}>{children}</Link>
+}
+
+export function WC({children}: {children?: string}) {
+  if (children) {
+    return <><span className={"text-default"}>{children}</span><span className={"text-custom-Y"}>WC</span></>;
+  }
+  return <span className={"text-custom-Y"}>WC</span>;
 }

@@ -1,9 +1,5 @@
-import {Art, Script} from "@/components/common";
+import {Art, Book} from "@/components/common";
 import Link from "next/link";
-
-function Book({children}: {children: string}) {
-  return <Link href={`/books/${children}`} className={"text-value"}>{children}</Link>
-}
 
 export default function Library() {
   /*return (
@@ -26,8 +22,12 @@ export default function Library() {
         <span className={"flex"}>
           <Art className={"text-key"}>{bookText}</Art>
         </span>
-        <Book>alohomora</Book>, br34k1ng th3 mud <span className={"text-custom-c"}>- Publisher: <Link href={"/publishers/nomiconcorp"}>Nomicon Corp</Link> | Writer: █████████</span><br/>
-        <Book>pay2wiz</Book>, casting spells <span className={"text-custom-c"}>- Publisher: <Link href={"/publishers/hotwizcorp"}>HotWiz Corp</Link> | Writer: █████████</span>
+        <Book>alohomora</Book>, breaking the mud <span className={"text-custom-c"}>
+        - Publisher: <Link href={"/publishers/hotwizcorp"}>HotWiz Corp</Link> | Writer: █████████</span><br/>
+        <Book>pay2wiz</Book>, casting spells <span className={"text-custom-c"}>
+        - Publisher: <Link href={"/publishers/hotwizcorp"}>HotWiz Corp</Link> | Writer: █████████</span><br/>
+        <Book>4rc4n3_3y3</Book>, f1nd th3 h1dd3n <span className={"text-custom-c"}>
+        - Publisher: <Link href={"/publishers/nomiconcorp"}>Nomicon Corp</Link> | Writer: █████████</span><br/>
 
         <p className={"pt-8"}>
           <span className={"text-red glow text-xl"}>:::LIBRARY COMMUNICATION:::</span>
