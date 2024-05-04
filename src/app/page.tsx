@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import {twMerge} from "tailwind-merge";
-import {Script} from "@/components/common";
+import {Art, Script} from "@/components/common";
 
 export default function Home() {
   const [isLive, setIsLive] = useState(false);
@@ -79,9 +79,6 @@ export default function Home() {
         <div className={"text-xl pt-4 pb-4"}>
           Welcome to wizmud public script. Please refrain from engaging in criminal activity.<br/>
           <Link href={"/library"} className={"text-script"}>library</Link> |  ¨ª¢©¦Ã¤ª¦
-        </div>
-        <div>
-          The wizards are sorry for taking the domain from <Script>wiz.mud</Script><br/>
         </div>
       </main>
     </>

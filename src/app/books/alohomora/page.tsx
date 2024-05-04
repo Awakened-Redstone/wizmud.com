@@ -14,7 +14,7 @@ export default function Book() {
       Remember to confirm the security level<br/>
       Learn how to use <WC/> at the <BookC>pay2wiz</BookC> <span className={"text-key"}>book</span>
       <br/><br/><br/>
-      Speels from <Script>wiz</Script>:
+      Spells from <Script>wiz</Script>:
       <br/><br/>
       <Script>wiz.magic_missile</Script> <span className={"text-custom-c"}>- Creator: unknown [FULLSEC] (<WC>1</WC>/cast)</span>
       <br/>
@@ -22,7 +22,7 @@ export default function Book() {
       <Script>wiz.magic_missile &#123;t1: #s.your.target&#125;</Script><br/>
       Remember to always carry some <WC/> with you when casting magic missile, as you need to charge the wand with one to cast it
       <br/><br/><br/>
-      Speels from users:
+      Spells from users:
       <br/><br/>
       <Script>merlin.knock</Script> <span className={"text-custom-c"}>- Creator: Merlin [FULLSEC] (<WC>2</WC>/cast)</span>
       <br/>
