@@ -34,11 +34,13 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
     const validJson = invalidJson.replace(/(\w+)(?=:)/g, '"$1"').replace(/(?<=:) ?(#\w+\.\w+\.\w+)/g, '"$1"');
     const json: ScriptParams = JSON.parse(validJson);
 
+    const keys = Object.keys(json);
+
     let val = (
       <>
         &nbsp;&#123;&nbsp;
         {
-          Object.keys(json).map(key => {
+          keys.map((key, index) => {
             const val = json[key]
             let parsedVal = <>{JSON.stringify(val)}</>;
             let isTarget: boolean = false;
@@ -58,6 +60,9 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
             return (
               <>
                 <span className={"text-key"}>{key}</span>: <span className={"text-value"}>{parsedVal}</span>
+                {
+                  index < keys.length - 1 && ", "
+                }
               </>
             );
           })

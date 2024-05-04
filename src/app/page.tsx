@@ -17,7 +17,7 @@ export default function Home() {
     });
   }, []);
 
-  const hatText: string = `
+  const hatText: string = `\
                           ██
                           ████
                           ██████
@@ -45,21 +45,29 @@ export default function Home() {
   ████████████████████████████████████████████████████
         ████████████████████████████████████████
                 ████████████████████████`
-    .replace("\n", "")
 
-  const hat = <>
-    <div className={"leading-none tracking-tight whitespace-pre glow"} onClick={event => {
+  const ws0002 = (
+    <div className={"absolute top-[16rem] right-[-2rem] text-custom-5 glow leading-none"}>
+      &lt;-- Wear the hat
+    </div>
+  );
+
+  const hat = <div className={"relative"}>
+    <div className={"leading-none tracking-tight whitespace-pre"} onClick={event => {
       setSc001(true)
     }}>
       {hatText}
     </div>
     <div className={"text-center pt-4"}>Hat from <Script>wiz.mud</Script></div>
-  </>
+    {
+      isLive && ws0002
+    }
+  </div>
 
   return (
     <>
-      <main className="items-center justify-between px-24 pt-8 text w-fit mx-auto text-center ">
-        <div className={"text-start w-fit mx-auto"}>
+      <main className="p-4">
+        <div className={"text-start w-fit"}>
           {
             sc001 && isLive ? <iframe
               src="https://player.twitch.tv/?channel=piratesoftware&parent=localhost&parent=wizmud.com&height=540"
@@ -68,24 +76,10 @@ export default function Home() {
               allowFullScreen/> : hat
           }
         </div>
-        <div className={"text-red-500 text-xl pt-4 pb-4"}>
-          The <span className={"text-script"}>library</span> is still being build, but is now open
+        <div className={"text-xl pt-4 pb-4"}>
+          Welcome to wizmud public script. Please refrain from engaging in criminal activity.<br/>
+          <Link href={"/library"} className={"text-script"}>library</Link> |  ¨ª¢©¦Ã¤ª¦
         </div>
-        <div className={"text-xl"}>
-          While we work, why not play some <Link className={"text-custom-H underline"}
-                                                 href={"https://www.humblebundle.com/store/hackmud?partner=piratesoftware"}>hackmud</Link>
-          <br/>
-          Also checkout the <Link className={"text-custom-H underline"}
-                                  href={"https://store.steampowered.com/news/app/469920/view/4219386527945891122"}>wiz.mud
-          event</Link>
-        </div>
-        <p className={"pt-8"}>
-          <span className={"text-red glow text-xl"}>:::███████ COMMUNICATION:::</span>
-          <br/>
-          Th3 w1z4rd5 0f <Script>wizmud.com</Script> w0uld
-          <br/>
-          l0v3 t0 w0rk w1th <Script>wiz.mud</Script>
-        </p>
       </main>
     </>
   );

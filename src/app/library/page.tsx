@@ -1,4 +1,9 @@
 import {Art, Script} from "@/components/common";
+import Link from "next/link";
+
+function Book({children}: {children: string}) {
+  return <Link href={`/books/${children}`} className={"text-value"}>{children}</Link>
+}
 
 export default function Library() {
   /*return (
@@ -7,14 +12,13 @@ export default function Library() {
     </main>
   );*/
 
-  const bookText: string = `
+  const bookText: string = `\
 ██████╗  █████╗  █████╗ ██╗  ██╗ ██████╗
 ██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝
 ██████╦╝██║  ██║██║  ██║█████═╝ ╚█████╗
 ██╔══██╗██║  ██║██║  ██║██╔═██╗  ╚═══██╗
 ██████╦╝╚█████╔╝╚█████╔╝██║ ╚██╗██████╔╝
-╚═════╝  ╚════╝  ╚════╝ ╚═╝  ╚═╝╚═════╝`
-    .replace("\n", "");
+╚═════╝  ╚════╝  ╚════╝ ╚═╝  ╚═╝╚═════╝`;
 
   return (
     <>
@@ -22,11 +26,11 @@ export default function Library() {
         <span className={"flex"}>
           <Art className={"text-key"}>{bookText}</Art>
         </span>
-        <span className={"text-value"}>alohomora</span>, br34k1ng th3 mud <span className={"text-custom-c"}>- Publisher: Tower Corp | Writer: █████████</span><br/>
-        <span className={"text-value"}>pay2wiz</span>, c4st1ng sp3lls <span className={"text-custom-c"}>- Publisher: Tower Corp | Writer: █████████</span>
+        <Book>alohomora</Book>, br34k1ng th3 mud <span className={"text-custom-c"}>- Publisher: <Link href={"/publishers/nomiconcorp"}>Nomicon Corp</Link> | Writer: █████████</span><br/>
+        <Book>pay2wiz</Book>, casting spells <span className={"text-custom-c"}>- Publisher: <Link href={"/publishers/hotwizcorp"}>HotWiz Corp</Link> | Writer: █████████</span>
 
         <p className={"pt-8"}>
-          <span className={"text-red glow text-xl"}>:::WIZMUD.COM COMMUNICATION:::</span>
+          <span className={"text-red glow text-xl"}>:::LIBRARY COMMUNICATION:::</span>
           <br/>
           Want a book or spell in the library?<br/>
           Ping <span className={"text-custom-c"}>@</span><span className={"text-custom-H"}>wizmud</span>
@@ -34,8 +38,8 @@ export default function Library() {
           <span className={"text-custom-3"}>piratesoftware discord</span>
           <br/>
           Please provide the spell script, security level and what it does, <br/>
-          &nbsp;it will be provided to the council and checked.<br/>
-          The only currency a spell can use is <span className={"text-custom-Y"}>WC</span>
+          &nbsp;after that the information will be provided to the publishers.<br/>
+          Spells that use a currency other than <span className={"text-custom-Y"}>WC</span> will likely be rejected
         </p>
       </main>
     </>

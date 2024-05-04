@@ -11,10 +11,11 @@ export default function Book() {
     <main>
       No lock is too strong for a wizard
       <br/><br/>
-      <Script>wiz.magic_missile</Script>
+      <Script>wiz.magic_missile</Script> <span className={"text-custom-c"}>- Creator unknown</span>
       <br/>
       Magic missile can crack open any magicless and soggy lock, simply cast&nbsp;
-      <Script>wiz.magic_missile &#123;t1: #s.your.target&#125;</Script>
+      <Script>wiz.magic_missile &#123;t1: #s.your.target&#125;</Script><br/>
+      Remember to always carry some <span className={"text-custom-Y"}>WC</span> with you when casting magic missile, as you need to charge the wand with one to cast it
     </main>
   );
 }
