@@ -36,20 +36,24 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
 
   if (split.length > 0) {
     const invalidJson = sections[1]
-    const validJson = invalidJson.replace(/(\w+)(?=:)/g, '"$1"').replace(/(?<=:) ?(#\w+\.\w+\.\w+)/g, '"$1"');
+    console.log(invalidJson)
+    const validJson = invalidJson.replace(/(\w+)(?=:)/g, '"$1"').replace(/(?<=:) ?(#s\.\w+\.\w+)/g, '"$1"');
     const json: ScriptParams = JSON.parse(validJson);
 
     const keys = Object.keys(json);
 
     let val = (
       <>
-        &nbsp;&#123;&nbsp;
+        &nbsp;&#123;
+        {
+          keys.length > 0 && " "
+        }
         {
           keys.map((key, index) => {
             const val = json[key]
             let parsedVal = <>{JSON.stringify(val)}</>;
             let isTarget: boolean = false;
-            if (typeof val === "string" && /(#\w+\.\w+\.\w+)/g.test(val as string)) {
+            if (typeof val === "string" && /(#s\.\w+\.\w+)/g.test(val as string)) {
               const parts = val.split(".");
               const trig = parts.shift();
               const script = parts.join(".");
@@ -72,7 +76,10 @@ export function Script({trust = false, children}: {trust?: boolean, children: st
             );
           })
         }
-        &nbsp;&#125;
+        {
+          keys.length > 0 && " "
+        }
+        &#125;
       </>
     );
 
