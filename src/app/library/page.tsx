@@ -30,16 +30,20 @@ export default function Library() {
         - Publisher: <Link href={"/publishers/nomiconcorp"}>Nomicon Corp</Link> | Writer: █████████</span><br/>
 
         <p className={"pt-8"}>
-          <span className={"text-red glow text-xl"}>:::LIBRARY COMMUNICATION:::</span>
+          <span className={"text-custom-D glow text-xl"}>:::LIBRARY COMMUNICATION:::</span>
           <br/>
           Want a book or spell in the library?<br/>
-          Ping <span className={"text-custom-c"}>@</span><span className={"text-custom-H"}>wizmud</span>
-          &nbsp;on <span className={"text-custom-c"}>#0000</span> at the&nbsp;
-          <span className={"text-custom-3"}>piratesoftware discord</span>
+          Send <span className={"text-custom-c"}>@</span><span className={"text-custom-H"}>wizmud</span> a DM with the
+          required info
+          <br/><br/>
+          Please provide:<br/>
+          - the spell script,<br/>
+          - security level,<br/>
+          - a clear description<br/>
+          - the cost, if any<br/>
           <br/>
-          Please provide the spell script, security level and what it does, <br/>
-          &nbsp;after that the information will be provided to the publishers.<br/>
-          Spells that use a currency other than <span className={"text-custom-Y"}>WC</span> will likely be rejected
+          After that the information will be provided to the publishers.<br/>
+          The preferred currency for spells is <span className={"text-custom-Y"}>WC</span>
         </p>
       </main>
     </>

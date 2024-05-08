@@ -70,7 +70,7 @@ export default function Home() {
         <div className={"text-start w-fit"}>
           {
             sc001 && isLive ? <iframe
-              src="https://player.twitch.tv/?channel=piratesoftware&parent=localhost&parent=wizmud.com&height=540"
+              src="https://player.twitch.tv/?channel=piratesoftware&parent=localhost&parent=wizmud.com&parent=www.wizmud.com&height=540"
               width="960"
               height="540"
               allowFullScreen/> : hat
