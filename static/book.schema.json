@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "YAML Schema for wixMUD.com's library",
+    "description": "Linting for the library's magic books",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "enum": [
+                "https://wizmud.com/book.schema.json"
+            ]
+        },
+        "greeting": {
+            "type": "string"
+        },
+        "council": {
+            "$ref": "/schemas/book"
+        },
+        "wizards": {
+            "$ref": "/schemas/book"
+        }
+    },
+    "required": ["greeting", "$schema"],
+    "$defs": {
+        "book": {
+            "$id": "/schemas/book",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "Spell description structure",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "patternProperties": {
+                "^\\w+\\.\\w+$": {
+                    "type": "object",
+                    "properties": {
+                        "security": {
+                            "type": "string",
+                            "x-intellij-case-insensitive": true,
+                            "enum": [
+                                "full",
+                                "mid",
+                                "low",
+                                "null"
+                            ]
+                        },
+                        "cost": {
+                            "type": "integer"
+                        },
+                        "costType": {
+                            "type": "string"
+                        },
+                        "date":  {
+                            "type": "string",
+                            "pattern": "^\\d\\d\\d\\d/\\d\\d/\\d\\d$"
+                        },
+                        "author": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["security", "date", "description"]
+                }
+            }
+        }
+    }
+}

@@ -5,20 +5,22 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+bun.lockb
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# svelte
+/.svelte-kit
 
 # production
 /build
+/package
 
 # misc
 .DS_Store
 *.pem
+/.idea/
 
 # debug
 npm-debug.log*
@@ -26,7 +28,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
+.env.*
 .env*.local
+!.env.example
 
 # vercel
 .vercel
@@ -34,4 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-/.idea/
+
+# vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

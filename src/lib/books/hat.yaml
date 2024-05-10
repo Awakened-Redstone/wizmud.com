@@ -1,0 +1,17 @@
+$schema: https://wizmud.com/book.schema.json
+
+greeting: |-
+  A wizard always carries it's hat with them, and a fancy hat should be known of
+
+wizards:
+  unknownwiz.showwiz:
+    security: full
+    date: "2024/09/05"
+    description: |-
+      Show off your wizardness with a cool hat!
+
+  unknownwiz.wand:
+    security: full
+    date: "2024/09/05"
+    description: |-
+      "Cast" a spell by swinging you wand

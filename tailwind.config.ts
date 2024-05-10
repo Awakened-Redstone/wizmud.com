@@ -1,11 +1,7 @@
 import type {Config} from "tailwindcss";
 
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+export default {
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     colors: {
       default: "#7AB2F4",
@@ -14,9 +10,6 @@ const config: Config = {
       script: "#1EFF00",
       key: "#00FFFF",
       value: "#FF00EC",
-      red: {
-        DEFAULT: "#FF0000"
-      },
       custom: {
         "0": "#CACACA",
         "1": "#FFFFFF",
@@ -82,7 +75,8 @@ const config: Config = {
         "Z": "#0C112B",
       }
     },
+    extend: {},
   },
   plugins: [],
-};
-export default config;
+} satisfies Config;
+

@@ -1,0 +1,48 @@
+{
+    "$id": "/schemas/book",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "YAML Schema for a spells of a book in wixMUD.com's library",
+    "description": "Spell description structure",
+    "type": "object",
+    "additionalProperties": false,
+    "minProperties": 2,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "enum": [
+                "https://wizmud.com/book.schema.json"
+            ]
+        }
+    },
+    "patternProperties": {
+        "^\\w+\\.\\w+$": {
+            "type": "object",
+            "properties": {
+                "security": {
+                    "type": "string",
+                    "x-intellij-case-insensitive": true,
+                    "enum": [
+                        "full",
+                        "mid",
+                        "low",
+                        "null"
+                    ]
+                },
+                "cost": {
+                    "type": "integer"
+                },
+                "costType": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": ["security", "date", "description"]
+        }
+    },
+    "required": ["$schema"]
+}

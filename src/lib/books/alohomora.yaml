@@ -1,0 +1,24 @@
+$schema: https://wizmud.com/book.schema.json
+
+greeting: |-
+  No lock is too strong for a wizard, here you can find spells that can deal with this so called "locks"
+
+council:
+  wiz.magic_missile:
+    security: full
+    cost: 1
+    date: "2024/05/09"
+    description: |-
+      Magic missile can crack open any "lock", simply cast wiz.magic_missile
+      Remember to always carry some WC with you when casting magic missile, as you need to charge the wand with one to cast it
+
+wizards:
+  merlin.knock:
+    security: full
+    cost: 2
+    date: "2024/05/09"
+    author: "merlin"
+    description: |-
+      Crack open multiple T1 targets with a single spell cast. This spell will cost you 2WC (if there where any "locks" on the targets)
+      It can be cast again with the same targets, if it couldn't finish them in the first run, and will continue where it ended.
+

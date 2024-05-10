@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #101215;
+  background-image: repeating-linear-gradient(180deg, #0e0e0e, #0e0e0e 0.2em, #101215 0.2em, #101215 0.4em);
+}
+
+body {
+  padding: 1.2rem 1rem 1rem;
+  filter: blur(0.3px) brightness(113%);
+}
+
+body.accessible {
+  filter: brightness(113%);
+  * {
+    text-shadow: none;
+  }
+}
+
+button.accessibility-button:focus > * {
+  @apply text-trust;
+}
+
+* {
+  font-family: "white_rabbitregular", monospace !important;
+  text-shadow: 0 0 15px color-mix(in srgb, currentColor, transparent 20%);
+  @apply text-default;
+  letter-spacing: 1.9px;
+  line-height: 0.955;
+}
+
+.command {
+  background: transparent;
+  border: 0;
+  outline: none;
+  width: calc(100% - 6rem);
+  color: transparent;
+  caret-color: white;
+
+  user-select: none;
+  -moz-user-select: none;
+
+  &::selection {
+    color: transparent;
+    background: transparent;
+  }
+}
+
+.hide_caret {
+  caret-color: transparent;
+}
+
+main {
+  min-height: calc(100vh - 3.7rem);
+}
+
+code {
+  font-family: "white_rabbitregular", monospace !important;
+}
+
+.glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+@font-face {
+  font-family:'white_rabbitregular';
+  src: url(/whiterabbit.woff2) format("woff2"), url(/whiterabbit.woff) format("woff");
+  font-weight:normal;
+  font-style:normal
+}
