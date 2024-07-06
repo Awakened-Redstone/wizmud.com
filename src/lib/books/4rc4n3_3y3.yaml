@@ -8,7 +8,7 @@ wizards:
     security: full
     cost: 1
     costType: "day"
-    date: "2024/05/09"
+    date: "2024/07/06"
     description: |-
       You can send one of the griphons of the Darkwood Menagerie to scout out a public corp to find some T1 locs using griphon.scout.
       It has multiple commands:
@@ -18,7 +18,7 @@ wizards:
 
   vecna.eye:
     security: full
-    date: "2024/05/09"
+    date: "2024/07/06"
     description: |-
       Find those who hide themself behind public corps, simply cast:
         vecna.eye {target: #s.your.public} to search a corp
