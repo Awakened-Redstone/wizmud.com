@@ -6,12 +6,12 @@ greeting: |-
 wizards:
   unknownwiz.showwiz:
     security: full
-    date: "2024/09/05"
+    date: "2024/07/06"
     description: |-
       Show off your wizardness with a cool hat!
 
   unknownwiz.wand:
     security: full
-    date: "2024/09/05"
+    date: "2024/07/06"
     description: |-
       "Cast" a spell by swinging you wand
