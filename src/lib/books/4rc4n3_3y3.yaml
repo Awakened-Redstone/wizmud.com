@@ -1,7 +1,7 @@
 $schema: https://wizmud.com/book.schema.json
 
 greeting: |-
-  You may try to hide from the wizards, but they will find you, here you will find spells to find those who try to hide
+  You may try to hide from the wizards, but they will find you, here you will find spells to find those who lurk in the shadows
 
 wizards:
   griphon.scout:
